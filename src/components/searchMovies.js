@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import MovieCard from './movieCard.js';
+// import MovieCard from './movieCard.js';
+import CardGroup from './cardGroup.js';
 export default function SearchMovies() {
 
     const [query, setQuery] = useState('');
@@ -39,11 +40,17 @@ export default function SearchMovies() {
 				</form>
 
 				<div className="card-list">
-					{movies
-						.filter((movie) => movie.poster_path)
-						.map((movie) => (
-							<MovieCard movie={movie} key={movie.id}/>
-						))}
+                    {/* {movies
+                        .filter((movie) => movie.poster_path)
+                        .map((movie) => (
+                            <MovieCard movie={movie} key={movie.id} />
+                        ))} */}
+                    {movies
+                        .filter((movie) => movie.poster_path)
+                        .map((movie) => (
+                            <CardGroup movie={movie} key={movie.id} />
+                        ))}
+
 				</div>
 			</>
 		);

@@ -14,8 +14,7 @@ body {
 }
 
 .content{
-  width: 100%;
-  
+    width: 100%;
 }
 
 p {
@@ -94,6 +93,6 @@ p {
   }
   .card--image{
     margin:0 auto;
-    display: block;
+    /* display: block; */
   
 }
